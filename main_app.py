@@ -36,6 +36,7 @@ if checkboxlv1:
 
                     update = pd.DataFrame({'이름':name,"전화번호":number},index=[0])
                     new = pd.concat([original,update])
+                    new = new.drop_duplicates()
 
                     ws1.clear()
                     ws1.set_dataframe(new,(1,1))
