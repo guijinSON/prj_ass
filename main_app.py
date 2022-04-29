@@ -7,12 +7,13 @@ st.title('PRJ_빵댕이를 흔들 수 있습니까?')
 with open("text.md") as f:
     st.markdown(f.read())
 
-if st.button('신청하러 가기'):
+if st.button('신청하러 가기',key='lv1'):
     st.image('im.jpeg')
+
     with open("money.md") as f:
         st.markdown(f.read())
     
-    if st.button('네, 알겠습니다!'):
+    if st.button('네, 알겠습니다!',key='lv2'):
 
         with st.form(key='my_form'):
             name = st.text_input(label='이름을 입력하세요')
