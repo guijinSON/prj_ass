@@ -13,7 +13,9 @@ if st.button('신청하러 가기',key='lv1'):
     with open("money.md") as f:
         st.markdown(f.read())
     
-    if st.button('네, 알겠습니다!',key='lv2'):
+    checkbox = st.checkbox('네, 알겠습니다!')
+    
+    if checkbox:
 
         with st.form(key='my_form'):
             name = st.text_input(label='이름을 입력하세요')
