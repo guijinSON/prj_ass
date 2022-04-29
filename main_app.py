@@ -7,15 +7,15 @@ st.title('PRJ_빵댕이를 흔들 수 있습니까?')
 with open("text.md") as f:
     st.markdown(f.read())
 
-if st.button('신청하러 가기',key='lv1'):
+checkboxlv1 = st.checkbox('네, 알겠습니다!', key='lv1')
+if checkboxlv1:
     st.image('im.jpeg')
 
     with open("money.md") as f:
         st.markdown(f.read())
     
-    checkbox = st.checkbox('네, 알겠습니다!')
-    
-    if checkbox:
+    checkboxlv2 = st.checkbox('네, 알겠습니다!')
+    if checkboxlv2:
 
         with st.form(key='my_form'):
             name = st.text_input(label='이름을 입력하세요')
